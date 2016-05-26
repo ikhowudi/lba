@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lansing Buddhist Association</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    <header><h1>Lansing Buddhist Association<br><small>蘭莘學佛會</small></h1></header>
+
+    <nav class="navbar navbar-inverse navbar-static-top w3-card-4" data-spy="affix" data-offset-top="200">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Lansing Buddhist Association</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="navbar-collapse navbar-right collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mem_events.html">Member Events</a></li>
+                            <li><a href="reg_events.html">Regular Events</a></li>
+                            <li><a href="spe_events.html">Special Events</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="teachers.html">Teachers</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="#">Links</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="w3-col w3-card-2" style="background-color:white;padding:16px"><img src="images/monkart.png" width="50%" style="float:left;margin-right:16px;padding-bottom:16px" alt="zen monk artwork"></img>A non-profit organization established in 1995, Lansing Buddhist Association (LBA) hosts meditation classes, dharma talks, retreats, and special events with visitng teachers from Taiwan, U.S., Malaysia, Thailand, Burma, and Tibet. All events are open to the public. The construction of LBA's retreat center, Amitabha Village Retreat Center (AVRC), is now complete. Together with our residential house Jing Ye Ju (House of Purified Karma; a.k.a. Perry House), AVRC can now accommodate teachers and retreatants traveling from afar and allow LBA to host bigger, longer events.<p><p>蘭莘學佛會自1995年成立以來，多次舉辦中英文禪坐與念佛共修，並多次邀請來自台灣、美國、馬來西亞、泰國、緬甸、西藏等各地的法師作短期弘講，帶領禪修與念佛。新建成的彌陀村禪堂與現有的淨業居，為舉辦大型佛法共修活動提供了理想的場所，讓遠道而來參訪的法師與佛友們有較適當的居住環境。</div>
+    </section>
+
+    <footer style="clear:both">
+        <div id="address" class="w3-hide"><a href="https://goo.gl/maps/BmP9x2hrA5u" target="blank">14796 Beardslee Rd, Perry, MI 48872</a></div>
+        <div id="phone" class="w3-hide">(517) 292-3110</div>
+        <div id="email" class="w3-hide"><a href="mailto:lansingbuddhist@gmail.com" target="blank">lansingbuddhist@gmail.com</a></div>
+        <div id="facebook" class="w3-hide"><a href="https://www.facebook.com/Lansing-Buddhist-Association-%E8%98%AD%E8%8E%98%E5%AD%B8%E4%BD%9B%E6%9C%83-272869559433636/?fref=ts" target="blank">facebook.com/Lansing-Buddhist-Association</a></div><br>
+
+        <i class="fa fa-map-marker fa-2x" onclick="showAddress()"></i>
+
+        <i class="fa fa-phone fa-2x" onclick="showPhone()"></i>
+
+        <i class="fa fa-envelope fa-2x" onclick="showEmail()"></i>
+
+        <i class="fa fa-facebook fa-2x" onclick="showFacebook()"></i>
+    </footer>
+
+    <script type="text/javascript">
+        $(".navbar").affix({offset: {top: $("header").outerHeight(true)} });
+    </script>
+
+    <script>
+        function showAddress() {
+            document.getElementById("address").classList.toggle("w3-show-inline-block");
+            document.getElementById("phone").classList.remove("w3-show-inline-block");
+            document.getElementById("email").classList.remove("w3-show-inline-block");
+            document.getElementById("facebook").classList.remove("w3-show-inline-block");
+        }
+        function showPhone() {
+            document.getElementById("address").classList.remove("w3-show-inline-block");
+            document.getElementById("phone").classList.toggle("w3-show-inline-block");
+            document.getElementById("email").classList.remove("w3-show-inline-block");
+            document.getElementById("facebook").classList.remove("w3-show-inline-block");
+        }
+        function showEmail() {
+            document.getElementById("address").classList.remove("w3-show-inline-block");
+            document.getElementById("phone").classList.remove("w3-show-inline-block");
+            document.getElementById("email").classList.toggle("w3-show-inline-block");
+            document.getElementById("facebook").classList.remove("w3-show-inline-block");
+        }
+        function showFacebook() {
+            document.getElementById("address").classList.remove("w3-show-inline-block");
+            document.getElementById("phone").classList.remove("w3-show-inline-block");
+            document.getElementById("email").classList.remove("w3-show-inline-block");
+            document.getElementById("facebook").classList.toggle("w3-show-inline-block");
+        }
+    </script>
+</body>
+</html>
